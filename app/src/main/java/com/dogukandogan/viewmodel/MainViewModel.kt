@@ -5,11 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dogukandogan.model.Post
 import com.dogukandogan.repository.Repository
+import com.dogukandogan.repository.TestRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.net.SocketOptions
 
-class MainViewModel(private val repository: Repository):ViewModel() {
+class MainViewModel(private val repository: TestRepository):ViewModel() {
 
     val myResponse : MutableLiveData<Response<Post>> = MutableLiveData()
     val myResponse2 : MutableLiveData<Response<Post>> = MutableLiveData()

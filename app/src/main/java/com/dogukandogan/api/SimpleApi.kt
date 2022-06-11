@@ -12,6 +12,7 @@ interface SimpleApi {
     @GET("posts/1")
     suspend fun getPost():Response<Post>
 
+
     @GET("posts/{postNumber}")
     suspend fun getPost2(
         @Path("postNumber") number:Int
